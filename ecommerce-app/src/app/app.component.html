@@ -1,4 +1,185 @@
-<h1>
-  {{title}}
-</h1>
+<!-- Navigation -->
+
+<div class="navbar-fixed-top">
+  <nav class="navbar-default">
+    <div class="container">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://bootstrap.jumpseller.com/" title="Bootstrap">            
+            <img src="assets/images/logo-bootstrap.jpg" class="navbar-brand store-image" alt="Bootstrap">            
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <form id="search_mini_form" class="navbar-form navbar-right form-inline" method="get" action="/search">
+            <div>
+              <input name="q" class="search text trsn form-control input-sm" onfocus="javascript:this.value=''" placeholder="Search for products" type="text">
+              <button type="submit" class="btn btn-default btn-sm hidden-xs hidden-sm hidden-md"><i class="fa fa-search fa-fw"></i></button>
+            </div>
+            <input value="Z5LpI7zdtpDg5NwgGxwlUa9pnPHUNUjvLyqQIWMtOzU=" name="authenticity_token" type="hidden">
+          </form>
+
+          <ul class="nav navbar-nav navbar-right visible-xs visible-sm hidden-md hidden-lg">
+            <!-- Store Categories -->
+            <li routerLinkActive="active">
+              <a routerLink="/home" title="Inicio" class="level-1 trsn">Inicio</a>  
+            </li>                
+            <li class="dropdown ">
+              <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="iconlevel-1 trsn" data-toggle="dropdown">Techno</a>
+    
+              <ul class="dropdown-menu multi-level">      
+                <li class="dropdown ">
+                  <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="iconlevel-1 trsn" data-toggle="dropdown">Techno</a>
+    
+                  <ul class="dropdown-menu multi-level">      
+                    <li class=" ">
+                        <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="level-1 trsn">Techno</a>  
+                    </li>      
+                  </ul>  
+                </li>      
+              </ul>  
+            </li>                
+            <li routerLinkActive="active">
+              <a routerLink="/about-us" title="About Us" class="level-1 trsn">About Us</a>  
+            </li>                
+            <li routerLinkActive="active">
+              <a routerLink="/blog" title="Blog" class="level-1 trsn">Blog</a>  
+            </li>
+            <li routerLinkActive="active">
+              <a routerLink="/contact" title="Contact" class="level-1 trsn">Contact</a>  
+            </li>                
+          </ul>
+           
+          <ul class="nav navbar-nav navbar-right nav-top">      
+            <li>
+              <a href="https://bootstrap.jumpseller.com/cart" class="trsn" title="View/Edit Cart">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="nav-bar-cart">1 Product(s) | $200.000</span>
+              </a>
+            </li>            
+            <li>
+              <a href="https://bootstrap.jumpseller.com/customer/login" id="login-link" class="trsn" title="Login toBootstrap">
+                <i class="fa fa-user fa-fw"></i>
+                <span class="customer-name">
+                  Login
+                </span>
+              </a>
+            </li>  
+          </ul>
+
+          <!-- small screen devices. -->
+          <ul class="social navbar-right list-inline visible-xs visible-sm hidden-md hidden-lg">
+            <li>
+              <a href="#" class="trsn" title="Go to Facebook" target="_blank">
+                <i class="fa fa-facebook fa-fw"></i>
+              </a>
+            </li>              
+            <li>
+              <a href="#" class="trsn" title="Go to Twitter" target="_blank">
+                <i class="fa fa-twitter fa-fw"></i>
+              </a>
+            </li>   
+            <li>
+              <a href="#" class="trsn" title="Go to Pinterest" target="_blank">
+                <i class="fa fa-pinterest fa-fw"></i>
+              </a>
+            </li>  
+            <li>
+              <a href="#" class="trsn" title="Go to Instagram" target="_blank">
+                <i class="fa fa-instagram fa-fw"></i>
+              </a>
+            </li>            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </div>
+  </nav>
+  <nav class="navbar navbar-inverse main-menu hidden-xs hidden-sm visible-md visible-lg">
+    <div class="container">
+      <div class="container-fluid row">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="social navbar-right list-inline col-lg-3 col-md-3">
+            <li>
+              <a href="#" class="trsn" title="Go to Facebook" target="_blank">
+                <i class="fa fa-facebook fa-fw"></i>
+              </a>
+            </li> 
+            <li>
+              <a href="#" class="trsn" title="Go to Twitter" target="_blank">
+                <i class="fa fa-twitter fa-fw"></i>
+              </a>
+            </li>               
+            <li>
+              <a href="#" class="trsn" title="Go to Pinterest" target="_blank">
+                <i class="fa fa-pinterest fa-fw"></i>
+              </a>
+            </li>  
+            <li>
+              <a href="#" class="trsn" title="Go to Instagram" target="_blank">
+                <i class="fa fa-instagram fa-fw"></i>
+              </a>
+            </li>            
+          </ul>
+          <ul class="nav navbar-nav navbar-left col-lg-9 col-md-9">
+            <!-- Store Categories -->            
+            <li routerLinkActive="active">
+              <a routerLink="/home" title="Inicio" class="level-1 trsn">Inicio</a>
+            </li>
+            
+            <li class="dropdown ">
+              <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="iconlevel-1 trsn" data-toggle="dropdown">Techno</a>
+
+              <ul class="dropdown-menu multi-level">  
+                <li class="dropdown ">
+                  <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="iconlevel-1 trsn" data-toggle="dropdown">Techno</a>
+
+                  <ul class="dropdown-menu multi-level">  
+                    <li class=" ">
+                      <a href="https://bootstrap.jumpseller.com/techno" title="Techno" class="level-1 trsn">Techno</a>
+                    </li> 
+                  </ul>
+                </li>  
+              </ul>
+            </li>            
+            <li routerLinkActive="active">
+              <a routerLink="/about-us" title="About Us" class="level-1 trsn">About Us</a>
+            </li>            
+            <li routerLinkActive="active">
+              <a routerLink="/blog" title="Blog" class="level-1 trsn">Blog</a>
+            </li>            
+            <li routerLinkActive="active">
+              <a routerLink="/contact" title="Contact" class="level-1 trsn">Contact</a>
+            </li>   
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </div>
+    <!-- /.container -->
+  </nav>
+</div>
+
 <router-outlet></router-outlet>
+
+<hr>
+
+<!-- Footer -->
+<div class="container">
+  <footer>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="powerd-by">© 2017 Bootstrap. All Rights Reserved. Powered by <a href="https://jumpseller.cl/?utm_medium=store&amp;utm_source=bootstrap" title="Crear Tienda Online" target="_blank" rel="nofollow">Jumpseller</a>.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /.container -->

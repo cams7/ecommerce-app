@@ -12,6 +12,18 @@ ng new ecommerce-app --routing
 cd /home/cams7/Dev/Projetos/ecommerce/ecommerce-app
 
 npm install ngx-bootstrap bootstrap --save
+npm install --save font-awesome angular2-font-awesome
+
+#Change 'ecommerce-app/.angular-cli.json' file
+#"styles": ["../node_modules/bootstrap/dist/css/bootstrap.css","../node_modules/font-awesome/css/font-awesome.css","styles.css"],
+
+
+npm test
+#CTR-C
+
+ng lint -fix
+
+ng e2e
 
 npm start
 #Go to http://localhost:4200
@@ -23,6 +35,31 @@ http-server dist/
 #Go to http://localhost:8080
 #CTR-C
 
+ng g m home
+ng g c home
+
+ng g c about-us
+
+ng g m blog
+ng g c blog
+
+ng g m contact
+ng g c contact
+
+ng g c page-not-found
+
+ng g m products
+ng g c products
+ng g s products/products
+
+ng g m shopping-cart
+ng g c shopping-cart
+ng g c shopping-cart/item
+ng g s shopping-cart/shopping-cart
+
+ng g m checkout
+ng g c checkout
+ng g s checkout/checkout
 
 #--------------------------------------------------------------------------------------------------
 
