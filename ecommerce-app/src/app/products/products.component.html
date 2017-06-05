@@ -55,107 +55,21 @@
   </div>
 
   <div class="row">    
-    <div class="col-sm-6 col-md-4 col-xs-12">
+    <div *ngFor="let product of products"  class="col-sm-6 col-md-4 col-xs-12">
       <div class="main-category-image">        
-        <a href="/wacom-tablet"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429444/resize/298/350?1439529365" alt="Wacom Bamboo Tablet" /></a>
+        <a href="/wacom-tablet"><img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}" /></a>
 
         <div class="caption">
           <h4 class="pull-right">
-            $100.000   
+            <span *ngIf="product.out_of_stock; else productPricing"  class="product-block-not-available">Out of Stock</span>
+            <ng-template #productPricing>{{ product.pricing | currency:'BRL':true }}</ng-template>               
           </h4>
-          <h4 class="pull-left"><a href="/wacom-tablet">Wacom Bamboo Tablet</a></h4>
+          <h4 class="pull-left"><a href="/wacom-tablet">{{ product.name }}</a></h4>
           <div class="clearfix"></div>
-          <p class="product-block-description">
-              Just getting going with your art? Transitioning from paper to computer-based work? The Bamboo Splash is a great way to explore your interests, with...           
-          </p>
+          <p class="product-block-description">{{ product.short_description }}</p>
         </div>
       </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="main-category-image">        
-        <a href="/smartphone-mtk6572"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429445/resize/298/350?1439529548" alt="Smartphone MTK6572 " /></a>
-
-        <div class="caption">
-          <h4 class="pull-right">           
-            $500.000           
-          </h4>
-          <h4 class="pull-left"><a href="/smartphone-mtk6572">Smartphone MTK6572 </a></h4>
-          <div class="clearfix"></div>
-          <p class="product-block-description">              
-              JK&nbsp;M8 Smartphone with&nbsp;Android 4.4.2 OS           
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="main-category-image">       
-        <a href="/imac-desktop-computer"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429446/resize/298/350?1439529839" alt="iMac Desktop Computer" /></a>
-
-        <div class="caption">
-          <h4 class="pull-right">            
-            $1.200.000            
-          </h4>
-          <h4 class="pull-left"><a href="/imac-desktop-computer">iMac Desktop Computer</a></h4>
-          <div class="clearfix"></div>
-          <p class="product-block-description">              
-              The idea behind iMac has never wavered: to craft the ultimate desktop experience. The best display, paired with high-performance processors, graphi...            
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="main-category-image">        
-        <a href="/ps4"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429450/resize/298/350?1439530709" alt="DualShock Controller for PlayStation 4" /></a>
-
-        <div class="caption">
-          <h4 class="pull-right">           
-            $20.000           
-          </h4>
-          <h4 class="pull-left"><a href="/ps4">DualShock Controller ...</a></h4>
-          <div class="clearfix"></div>
-          <p class="product-block-description">              
-              The DualShock®4 Wireless Controller for PlayStation®4 defines the next generation of play, combining revolutionary new features with intuitive, pre...           
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="main-category-image">        
-        <a href="/keyboarded-tablet"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429448/resize/298/350?1439530289" alt="Asus Transformer Pad Tablet" /></a>
-
-        <div class="caption">
-          <h4 class="pull-right">           
-            $200.000           
-          </h4>
-          <h4 class="pull-left"><a href="/keyboarded-tablet">Asus Transformer Pad ...</a></h4>
-          <div class="clearfix"></div>
-          <p class="product-block-description">             
-              The New ASUS Transformer Pad is a 10.1-inch mobile entertainment tablet with a vivid 1280 x 800 IPS display, the latest high-performance Intel BayT...            
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4 col-xs-12">
-      <div class="main-category-image">        
-        <a href="/dualshock-controller-for-playstation-4"><img class="img-responsive img-portfolio img-hover" src="//cdnx.jumpseller.com/bootstrap/image/429451/resize/298/350?1439530880" alt="Dualshock Controller for PlayStation 4" /></a>
-
-        <div class="caption">
-          <h4 class="pull-right">            
-            <span class="product-block-not-available">Out of Stock</span>            
-          </h4>
-          <h4 class="pull-left"><a href="/dualshock-controller-for-playstation-4">Dualshock Controller ...</a></h4>
-          <div class="clearfix"></div>
-          <p class="product-block-description">              
-              The DualShock®4 Wireless Controller for PlayStation®4 defines the next generation of play, combining revolutionary new features with intuitive, pre...            
-          </p>
-        </div>
-      </div>
-    </div>    
+    </div>   
 
     <div class="clearfix"></div>
     <div class="row">

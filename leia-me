@@ -50,6 +50,8 @@ ng g c contact
 
 ng g c page-not-found
 
+ng g s settings
+
 ng g m products
 ng g c products
 ng g s products/products

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Product } from './../products/product';
+import { ProductsService } from './../products/products.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,15 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  myInterval = 1500;
+  interval = 1500;
   slides: any[] = [];
   activeSlideIndex: number;
   noWrapSlides = false;
 
-  constructor() { }
+  products: Product[] = [];
+
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
   ngOnInit() {
     this.addSlide();
+
+    this.loadProducts();
+  }
+
+  removeSlide(index?: number): void {
+    const toRemove = index ? index : this.activeSlideIndex;
+    this.slides.splice(toRemove, 1);
   }
 
   private addSlide(): void {
@@ -32,9 +46,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  removeSlide(index?: number): void {
-    const toRemove = index ? index : this.activeSlideIndex;
-    this.slides.splice(toRemove, 1);
+  private loadProducts(): void {
+    this.productsService.all().subscribe(
+      products => this.products = products
+    );
   }
 
 }

@@ -2,13 +2,13 @@ import { Product } from './../products/product';
 
 export class Review {
   constructor(
-    id: number,
-    product: Product,
-    rating: number,
-    comment: string,
-    approved: boolean = true,
-    spam: boolean = false,
-    created_at: Date,
-    updated_at: Date
+    public id: number,
+    public product: Product,
+    public rating: number,
+    public comment: string,
+    public approved: boolean = true,
+    public spam: boolean = false,
+    public created_at: Date,
+    public updated_at: Date
   ) {}
 }

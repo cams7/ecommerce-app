@@ -5,6 +5,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { HomeComponent } from './home.component';
 
+import { ProductsService } from './../products/products.service';
+
 import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
@@ -15,6 +17,9 @@ import { HomeRoutingModule } from './home-routing.module';
   ],
   declarations: [
     HomeComponent
+  ],
+  providers: [
+    ProductsService
   ]
 })
 export class HomeModule { }
