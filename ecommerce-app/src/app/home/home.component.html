@@ -22,14 +22,16 @@
     
     <!-- Featured Products -->  	
     <div *ngFor="let product of products" class="col-md-4 col-sm-6 col-xs-12 product-home">    
-      <a href="https://bootstrap.jumpseller.com/dualshock-controller-for-playstation-4"><img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}"></a>
+      <a [routerLink]="['/items', product.id]">
+        <img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}">
+      </a>
 
       <div class="caption">
         <h4 class="pull-right">  
           <span *ngIf="product.out_of_stock; else productPricing"  class="product-block-not-available">Out of Stock</span>
           <ng-template #productPricing>{{ product.pricing | currency:'BRL':true }}</ng-template>
         </h4>
-        <h4 class="pull-left"><a href="https://bootstrap.jumpseller.com/dualshock-controller-for-playstation-4">{{ product.name }}</a></h4>
+        <h4 class="pull-left"><a [routerLink]="['/items', product.id]">{{ product.name }}</a></h4>
         <div class="clearfix"></div>
         <p class="product-block-description">{{ product.short_description }}</p>
       </div>

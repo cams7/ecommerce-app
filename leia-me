@@ -62,10 +62,11 @@ ng g c reviews
 ng g s reviews/reviews
 ng g class reviews/review
 
-ng g m shopping-cart
-ng g c shopping-cart
-ng g c shopping-cart/item
-ng g s shopping-cart/shopping-cart
+ng g m items
+ng g c items
+ng g c items/item-details
+ng g s items/items
+ng g class items/item
 
 ng g m checkout
 ng g c checkout

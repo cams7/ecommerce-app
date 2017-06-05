@@ -1,0 +1,174 @@
+<!-- Page Content -->
+<section class="container">
+  <div class="row">
+    <section class="col-sm-12 col-md-12 hidden-xs">
+      <ol class="breadcrumb">  
+        <li><a routerLink="/home" class="trsn" title="Go back to Home">Home</a></li>  
+        <li><span>Shopping Cart</span></li>
+      </ol>
+    </section>
+  </div>
+</section>
+
+<div class="container">  
+  <!-- Page Heading -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h1 class="page-header">Shopping Cart</h1>
+    </div>
+  </div><!-- /.row -->  
+
+  <!-- Cart Table -->	  
+  <div class="col-sm-12 col-md-8">
+    <div class="row">
+      <form id="cart-update-form" method="post" action="/cart/update">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th class="hidden-xs"></th>
+                <th class="hidden-xs">Unit Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>        
+            <tr>
+              <td>          
+                <h3>Wacom Bamboo Tablet</h3>            
+                <small>color: Grey</small><br>    
+              </td>
+              <td class="text-center hidden-xs">
+                <a href="/wacom-tablet" class="trsn" title="Wacom Bamboo Tablet">              
+                  <img src="//cdnx.jumpseller.com/bootstrap/image/429444/resize/120/100?1439529365" alt="Wacom Bamboo Tablet" title="Wacom Bamboo Tablet">              
+                </a>
+              </td>
+              <td class="hidden-xs">          	
+                <span class="order-product-price">$100.000</span>            
+              </td>
+              <td>
+                <select class="select select-qty form-control" name="2669589" title="Qty" > 
+                  <option value="1" >1</option>               
+                  <option value="2" selected="selected">2</option>               
+                  <option value="3" >3</option>               
+                </select>
+              </td>
+              <td>
+                <span class="order-product-subtotal">$200.000</span>
+              </td>
+              <td> <a href="/cart/remove_product/2669589" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
+            </tr>        
+            <tr>
+              <td>         
+                <h3>            
+                  Asus Transformer Pad Tablet
+                </h3>                    
+              </td>
+              <td class="text-center hidden-xs">
+                <a href="/keyboarded-tablet" class="trsn" title="Asus Transformer Pad Tablet">              
+                  <img src="//cdnx.jumpseller.com/bootstrap/image/429448/resize/120/100?1439530289" alt="Asus Transformer Pad Tablet" title="Asus Transformer Pad Tablet">              
+                </a>
+              </td>
+              <td class="hidden-xs">          	
+                <span class="order-product-price">$200.000</span>            
+              </td>
+              <td>
+                <select class="select select-qty form-control" name="2669593" title="Qty" >   
+                  <option value="1" >1</option>               
+                  <option value="2" selected="selected">2</option>               
+                  <option value="3" >3</option>               
+                </select>
+              </td>
+              <td>
+                <span class="order-product-subtotal">$400.000</span>
+              </td>
+              <td> <a href="/cart/remove_product/2669593" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
+            </tr>        
+            <tr>
+              <td>          
+                <h3>            
+                  DualShock Controller for PlayStation 4
+                </h3>                    
+              </td>
+              <td class="text-center hidden-xs">
+                <a href="/ps4" class="trsn" title="DualShock Controller for PlayStation 4">              
+                  <img src="//cdnx.jumpseller.com/bootstrap/image/429450/resize/120/100?1439530709" alt="DualShock Controller for PlayStation 4" title="DualShock Controller for PlayStation 4">              
+                </a>
+              </td>
+              <td class="hidden-xs">          	
+                <span class="order-product-price">$20.000</span>            
+              </td>
+              <td>
+                <select class="select select-qty form-control" name="2669612" title="Qty" >   
+                  <option value="1" selected="selected">1</option>               
+                  <option value="2" >2</option>               
+                  <option value="3" >3</option>               
+                </select>
+              </td>
+              <td>
+                <span class="order-product-subtotal">$20.000</span>
+              </td>
+              <td> <a href="/cart/remove_product/2669612" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
+            </tr>        
+          </table>
+        </div>
+      </form>
+    </div>    
+    <div class="row">            
+      <div class="col-sm-12 cart-discount text-center">
+        <hr>
+        <h4>Have a discount code?</h4>       
+        <form action="/cart/coupon" accept-charset="UTF-8" id="coupon_form" autocomplete="off" method="post">  
+          <input id="coupon_code" name="code" type="text" class="text"/>
+          <input id="set_coupon_code_button" type="submit" value="Apply"/>
+          <label class="error" for="set_coupon_code_button"></label>
+        </form> 
+        <hr class="visible-xs visible-sm hidden-md hidden-lg">
+      </div>  
+    </div>
+  </div>  
+
+  <!-- Cart Options -->
+  <div class="col-sm-12 col-md-4"> 
+    <div class="col-sm-12 col-md-12 cart-estimate">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h5 class="panel-title">Estimate Shipping Costs</h5>
+        </div>
+        <div class="panel-body">
+          <div id="estimate_shipping">
+            <form action="/cart/estimate" accept-charset="UTF-8" id="estimate_shipping_form" autocomplete="off" method="post">    <label for="estimate_shipping_country">Country</label>
+              <select name="estimate[country]" id="estimate_shipping_country" class="select"><option value=""></option>
+                <option value="AR">Argentina</option>
+                <option value="BR">Brazil</option>
+                <option value="UY">Uruguay</option>
+              </select>
+
+              <label for="estimate_shipping_region">Region</label>
+              <select name="estimate[region]" id="estimate_shipping_region" class="select"></select>
+
+              <div class="estimate_shipping_buttons">
+                <input id="estimate_shipping_button" type="submit" value="Estimate Shipping & Tax"/>
+              </div>
+            </form>
+            <!-- Only for Postal (not a checkout_custom_field) -->
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div class="col-sm-12 cart-totals">
+      <table class="table table-striped">
+        <tr class="totals key">
+          <td colspan="1" class="text-left"><strong>Total</strong></td>
+          <td colspan="1" class="text-right"><strong>$620.000</strong></td>
+        </tr>
+      </table>
+
+      <div class="text-center cart-actions">
+        <a href="/checkout" class="btn btn-primary btn-block" title="Proceed to Checkout">Proceed to Checkout</a>
+        <a href="https://bootstrap.jumpseller.com" class="btn btn-link btn-block" title="&larr; Continue Shopping">&larr; Continue Shopping</a>
+      </div>
+    </div>    
+  </div>  
+</div>

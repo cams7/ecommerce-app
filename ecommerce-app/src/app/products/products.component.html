@@ -57,14 +57,16 @@
   <div class="row">    
     <div *ngFor="let product of products"  class="col-sm-6 col-md-4 col-xs-12">
       <div class="main-category-image">        
-        <a href="/wacom-tablet"><img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}" /></a>
+        <a [routerLink]="['/items', product.id]">
+          <img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}" />
+        </a>
 
         <div class="caption">
           <h4 class="pull-right">
             <span *ngIf="product.out_of_stock; else productPricing"  class="product-block-not-available">Out of Stock</span>
             <ng-template #productPricing>{{ product.pricing | currency:'BRL':true }}</ng-template>               
           </h4>
-          <h4 class="pull-left"><a href="/wacom-tablet">{{ product.name }}</a></h4>
+          <h4 class="pull-left"><a [routerLink]="['/items', product.id]">{{ product.name }}</a></h4>
           <div class="clearfix"></div>
           <p class="product-block-description">{{ product.short_description }}</p>
         </div>
