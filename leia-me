@@ -14,10 +14,11 @@ cd /home/cams7/Dev/Projetos/ecommerce/ecommerce-app
 npm install ngx-bootstrap bootstrap --save
 npm install --save font-awesome angular2-font-awesome
 npm install angularjs-color-picker --save
+npm install jquery --save
 
 #Change 'ecommerce-app/.angular-cli.json' file
 #"styles": ["../node_modules/bootstrap/dist/css/bootstrap.css","../node_modules/font-awesome/css/font-awesome.css","styles.css","../node_modules/angularjs-color-picker/dist/angularjs-color-picker.css"],
-
+#"scripts": ["../node_modules/jquery/dist/jquery.js","../node_modules/bootstrap/dist/js/bootstrap.js"],
 
 npm test
 #CTR-C
@@ -52,6 +53,12 @@ ng g c page-not-found
 ng g m products
 ng g c products
 ng g s products/products
+ng g class products/product
+
+ng g m reviews
+ng g c reviews
+ng g s reviews/reviews
+ng g class reviews/review
 
 ng g m shopping-cart
 ng g c shopping-cart
@@ -82,8 +89,8 @@ node .
 #Go to http://0.0.0.0:3000/explorer
 #CTR-C
 
-rm  ~/Dev/Projetos/ecommerce/ecommerce-api/client/*
-cp ~/Dev/Projetos/ecommerce/ecommerce-app/dist/*  ~/Dev/Projetos/ecommerce/ecommerce-api/client
+rm -r  ~/Dev/Projetos/ecommerce/ecommerce-api/client/*
+cp -r ~/Dev/Projetos/ecommerce/ecommerce-app/dist/*  ~/Dev/Projetos/ecommerce/ecommerce-api/client
 
 node .
 #Go to http://0.0.0.0:3000
