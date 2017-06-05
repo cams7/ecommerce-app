@@ -1,3 +1,66 @@
-<p>
-  contact works!
-</p>
+<!-- Page Content -->    
+<section class="container">
+  <div class="row">
+    <section class="col-sm-12 col-md-12 hidden-xs">
+      <ol class="breadcrumb">  
+        <li><a routerLink="/home" class="trsn" title="Go back to Home">Home</a></li>  
+        <li><span>Contact</span></li>
+      </ol>
+    </section>
+  </div>
+</section>
+    
+
+<div class="container">
+  <!-- Page Heading -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h1 class="page-header">Contact Us</h1>
+    </div>
+  </div><!-- /.row -->
+
+  <div class="row">
+    <section class="col-md-6 col-sm-6 col-xs-12">
+      <h2>Contact Form</h2>
+      <p>Send us a message and we will reply to you as quick as possible.</p>
+      <form action="/contact/send" accept-charset="UTF-8" method="post" id="contact_form">  
+        <div id="contactpage">    
+          <div id="contactpage_email" class="field">
+            <label for="email" class="required">E-mail <em>*</em></label><br>
+            <input type="email" name="contact[email]" id="contact_email" class="text" />            
+          </div>
+
+          <div id="contactpage_name" class="field">
+            <label for="contactpage_name" class="required">Name <em>*</em></label><br>
+            <input type="text" name="contact[name]" id="contact_name" class="text" />            
+          </div>
+
+          <div id="contactpage_phone" class="field">
+            <label for="contactpage_phone">Phone</label><br>
+            <input type="text" name="contact[phone]" id="contact_phone" class="text" />            
+          </div>
+
+          <div id="contactpage_message">
+            <label for="contactpage_message" class="required">Message <em>*</em></label><br>
+            <textarea name="contact[message]" id="contact_message" class="text" style="height:10em;"></textarea>            
+          </div>
+
+          <p class="required">* Required Fields</p>
+          <div style="text-align:right;" class="actions">
+            <input type="submit" value="Submit" class="button" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="col-md-6 col-sm-6 col-xs-12">
+      <h2>Contact Information</h2>	
+      <ul id="contact-list">
+        <li><i class="fa fa-paper-plane fa-fw"></i> someone@example.com</li>
+        <li><i class="fa fa-phone fa-fw"></i> +1 123 123 123</li>
+        <li><i class="fa fa-map-marker fa-fw"></i> Bombero Nuñez 131</li>
+      </ul>      
+      <iframe width="100%" height="370" frameborder="0" scrolling="no" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC6ZiuZ7Pn3Kjuxb4Z4izwX7LSnJWhVaik&q=Bombero Nuñez 131,Santiago,metropilotana,Chile" allowfullscreen> </iframe>      
+    </section>
+  </div>
+</div><!-- /.container -->

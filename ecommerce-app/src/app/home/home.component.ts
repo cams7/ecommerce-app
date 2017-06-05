@@ -19,14 +19,16 @@ export class HomeComponent implements OnInit {
   }
 
   private addSlide(): void {
+    const image_path = `assets/images/slider-demo.jpg`;
+
     this.slides.push({
-      image: `assets/images/slider-demo.jpg`
+      image: image_path
     });
     this.slides.push({
-      image: `assets/images/slider-demo.jpg`
+      image: image_path
     });
     this.slides.push({
-      image: `assets/images/slider-demo.jpg`
+      image: image_path
     });
   }
 

@@ -1,5 +1,4 @@
 <!-- Navigation -->
-
 <div class="navbar-fixed-top">
   <nav class="navbar-default">
     <div class="container">
@@ -12,7 +11,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="https://bootstrap.jumpseller.com/" title="Bootstrap">            
+          <a routerLink="/home" title="E-Commerce">            
             <img src="assets/images/logo-bootstrap.jpg" class="navbar-brand store-image" alt="Bootstrap">            
           </a>
         </div>
@@ -102,6 +101,7 @@
       </div><!-- /.container-fluid -->
     </div>
   </nav>
+
   <nav class="navbar navbar-inverse main-menu hidden-xs hidden-sm visible-md visible-lg">
     <div class="container">
       <div class="container-fluid row">
@@ -160,26 +160,22 @@
               <a routerLink="/contact" title="Contact" class="level-1 trsn">Contact</a>
             </li>   
           </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+        </div><!-- /.navbar-collapse -->
       </div>
-    </div>
-    <!-- /.container -->
+    </div><!-- /.container -->
   </nav>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>   
 
-<hr>
-
-<!-- Footer -->
 <div class="container">
+  <hr>
+  <!-- Footer -->
   <footer>
     <div class="row">
-      <div class="col-sm-12">
-        <p class="powerd-by">© 2017 Bootstrap. All Rights Reserved. Powered by <a href="https://jumpseller.cl/?utm_medium=store&amp;utm_source=bootstrap" title="Crear Tienda Online" target="_blank" rel="nofollow">Jumpseller</a>.</p>
+      <div class="col-lg-12">
+        <p>Copyright &copy; Your Website 2014</p>
       </div>
     </div>
   </footer>
-</div>
-<!-- /.container -->
+</div><!-- /.container -->

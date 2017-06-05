@@ -13,9 +13,10 @@ cd /home/cams7/Dev/Projetos/ecommerce/ecommerce-app
 
 npm install ngx-bootstrap bootstrap --save
 npm install --save font-awesome angular2-font-awesome
+npm install angularjs-color-picker --save
 
 #Change 'ecommerce-app/.angular-cli.json' file
-#"styles": ["../node_modules/bootstrap/dist/css/bootstrap.css","../node_modules/font-awesome/css/font-awesome.css","styles.css"],
+#"styles": ["../node_modules/bootstrap/dist/css/bootstrap.css","../node_modules/font-awesome/css/font-awesome.css","styles.css","../node_modules/angularjs-color-picker/dist/angularjs-color-picker.css"],
 
 
 npm test
