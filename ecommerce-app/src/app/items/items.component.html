@@ -34,18 +34,18 @@
                 <th></th>
               </tr>
             </thead>        
-            <tr>
+            <tr *ngFor="let item of items" >
               <td>          
-                <h3>Wacom Bamboo Tablet</h3>            
+                <h3>{{ item.product.name }}</h3>            
                 <small>color: Grey</small><br>    
               </td>
               <td class="text-center hidden-xs">
-                <a href="/wacom-tablet" class="trsn" title="Wacom Bamboo Tablet">              
-                  <img src="//cdnx.jumpseller.com/bootstrap/image/429444/resize/120/100?1439529365" alt="Wacom Bamboo Tablet" title="Wacom Bamboo Tablet">              
+                <a [routerLink]="['/items', item.product.id]" class="trsn" title="{{ item.product.name }}">              
+                  <img src="{{ item.product.icon }}" alt="Wacom Bamboo Tablet" title="{{ item.product.name }}">              
                 </a>
               </td>
               <td class="hidden-xs">          	
-                <span class="order-product-price">$100.000</span>            
+                <span class="order-product-price">{{ item.product.pricing | currency:'BRL':true }}</span>            
               </td>
               <td>
                 <select class="select select-qty form-control" name="2669589" title="Qty" > 
@@ -55,62 +55,10 @@
                 </select>
               </td>
               <td>
-                <span class="order-product-subtotal">$200.000</span>
+                <span class="order-product-subtotal">{{ item.subtotal | currency:'BRL':true }}</span>
               </td>
               <td> <a href="/cart/remove_product/2669589" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
-            </tr>        
-            <tr>
-              <td>         
-                <h3>            
-                  Asus Transformer Pad Tablet
-                </h3>                    
-              </td>
-              <td class="text-center hidden-xs">
-                <a href="/keyboarded-tablet" class="trsn" title="Asus Transformer Pad Tablet">              
-                  <img src="//cdnx.jumpseller.com/bootstrap/image/429448/resize/120/100?1439530289" alt="Asus Transformer Pad Tablet" title="Asus Transformer Pad Tablet">              
-                </a>
-              </td>
-              <td class="hidden-xs">          	
-                <span class="order-product-price">$200.000</span>            
-              </td>
-              <td>
-                <select class="select select-qty form-control" name="2669593" title="Qty" >   
-                  <option value="1" >1</option>               
-                  <option value="2" selected="selected">2</option>               
-                  <option value="3" >3</option>               
-                </select>
-              </td>
-              <td>
-                <span class="order-product-subtotal">$400.000</span>
-              </td>
-              <td> <a href="/cart/remove_product/2669593" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
-            </tr>        
-            <tr>
-              <td>          
-                <h3>            
-                  DualShock Controller for PlayStation 4
-                </h3>                    
-              </td>
-              <td class="text-center hidden-xs">
-                <a href="/ps4" class="trsn" title="DualShock Controller for PlayStation 4">              
-                  <img src="//cdnx.jumpseller.com/bootstrap/image/429450/resize/120/100?1439530709" alt="DualShock Controller for PlayStation 4" title="DualShock Controller for PlayStation 4">              
-                </a>
-              </td>
-              <td class="hidden-xs">          	
-                <span class="order-product-price">$20.000</span>            
-              </td>
-              <td>
-                <select class="select select-qty form-control" name="2669612" title="Qty" >   
-                  <option value="1" selected="selected">1</option>               
-                  <option value="2" >2</option>               
-                  <option value="3" >3</option>               
-                </select>
-              </td>
-              <td>
-                <span class="order-product-subtotal">$20.000</span>
-              </td>
-              <td> <a href="/cart/remove_product/2669612" class="cart-product-remove" title="Remove Product"><i class="fa fa-times-circle-o fa-fw"></i></a></td>
-            </tr>        
+            </tr>  
           </table>
         </div>
       </form>
