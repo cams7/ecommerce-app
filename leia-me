@@ -98,3 +98,245 @@ cp -r ~/Dev/Projetos/ecommerce/ecommerce-app/dist/*  ~/Dev/Projetos/ecommerce/ec
 node .
 #Go to http://0.0.0.0:3000
 #CTR-C
+
+-------------------------------------------------
+
+sudo -i -u postgres
+psql -d template1 -U postgres
+CREATE USER ecommerce_admin WITH PASSWORD '12345';
+CREATE DATABASE ecommerce;
+GRANT ALL PRIVILEGES ON DATABASE ecommerce to ecommerce_admin;
+\q
+exit
+
+lb datasource
+
+Enter the datasource name: ecommerceDS
+Select the connector for ecommerceDS: PostgreSQL ...
+Connection String url to override other settings (eg: postgres://username:password@localhost/database):
+host: 127.0.0.1
+port: 5432
+user: ecommerce_admin
+password:12345
+database: ecommerce
+Install loopback-connector-postgresql@^2.4 Yes
+
+-------------------------------------------------
+
+mysql -u root -p
+CREATE DATABASE ecommerce;
+CREATE USER 'store_owner'@'%' IDENTIFIED BY 'store';
+GRANT ALL PRIVILEGES ON ecommerce.* TO 'store_owner'@'%';
+FLUSH PRIVILEGES;		
+exit		
+mysql --host=127.0.0.1 --user=store_owner --password=store ecommerce
+exit
+
+lb datasource
+
+Enter the datasource name: ecommerceDS
+Select the connector for ecommerceDS: MySQL ...
+Connection String url to override other settings (eg: mysql://user:pass@host/db):
+host: 127.0.0.1
+port: 3306
+user: store_owner
+password: store
+database: ecommerce
+Install loopback-connector-mysql@^2.2 Yes
+loopback-connector-mysql@2.4.1
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: Customer
+Select the datasource to attach Customer to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose Customer via the REST API? Yes
+Common model or server only? common
+
+Enter an empty property name when done.
+Property name: name
+Property type: string
+Required? Yes
+
+Property name: phone
+Property type: string
+Required? Yes
+
+Property name: createdAt
+Property type: date
+Required? Yes
+
+Property name: updatedAt
+Property type: date
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: Order
+Select the datasource to attach Order to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose Order via the REST API? Yes
+Common model or server only? common
+
+Property name: quantity
+Property type: number
+Required? Yes
+
+Property name: subtotal
+Property type: number
+Required? Yes
+
+Property name: status
+Property type: number
+Required? Yes
+
+Property name: createdAt
+Property type: date
+Required? Yes
+
+Property name: updatedAt
+Property type: date
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: OrderItem
+Select the datasource to attach OrderItem to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose OrderItem via the REST API? Yes
+Common model or server only? common
+
+Property name: productCost
+Property type: number
+Required? Yes
+
+Property name: quantity
+Property type: number
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: Product
+Select the datasource to attach Product to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose Product via the REST API? Yes
+Common model or server only? common
+
+Property name: name
+Property type: string
+Required? Yes
+
+Property name: pricing
+Property type: number
+Required? Yes
+
+Property name: shortDescription
+Property type: string
+Required? No
+
+Property name: longDescription
+Property type: string
+Required? No
+
+Property name: published
+Property type: boolean
+Required? Yes
+
+Property name: ratingCache
+Property type: number
+Required? No
+
+Property name: ratingCount
+Property type: number
+Required? No
+
+Property name: createdAt
+Property type: date
+Required? Yes
+
+Property name: updatedAt
+Property type: date
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: StoredProduct
+Select the datasource to attach StoredProduct to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose StoredProduct via the REST API? Yes
+Common model or server only? common
+
+Property name: quantity
+Property type: number
+Required? Yes
+
+Property name: subtotal
+Property type: number
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: ProductReview
+Select the datasource to attach ProductReview to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose ProductReview via the REST API? Yes
+Common model or server only? common
+
+Property name: rating
+Property type: number
+Required? Yes
+
+Property name: comment
+Property type: string
+Required? Yes
+
+Property name: approved
+Property type: boolean
+Required? Yes
+
+Property name: spam
+Property type: boolean
+Required? Yes
+
+Property name: createdAt
+Property type: date
+Required? Yes
+
+Property name: updatedAt
+Property type: date
+Required? Yes
+
+-------------------------------------------------
+
+lb model
+
+Enter the model name: ProductImage
+Select the datasource to attach ProductImage to: ecommerceDS ...
+Select model's base class PersistedModel
+Expose ProductImage via the REST API? Yes
+Common model or server only? common
+
+Property name: icon
+Property type: string
+Required? Yes
+
+Property name: size
+Property type: number
+Required? Yes
+
+-------------------------------------------------
+
+
+	

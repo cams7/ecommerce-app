@@ -1,0 +1,33 @@
+{
+  "name": "ProductImage",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce",
+      "table": "product_image"
+    }
+  },
+  "properties": {
+    "icon": {
+      "type": "string",
+      "required": true,
+      "postgresql": {
+        "dataType": "VARCHAR",
+        "dataLength": 255
+      }
+    },
+    "size": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "dataType": "SMALLINT"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

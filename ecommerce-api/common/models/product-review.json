@@ -1,0 +1,50 @@
+{
+  "name": "ProductReview",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce",
+      "table": "product_review"
+    }
+  },
+  "properties": {
+    "rating": {
+      "type": "number",
+      "required": true
+    },
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "approved": {
+      "type": "boolean",
+      "required": true
+    },
+    "spam": {
+      "type": "boolean",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true,
+      "postgresql": {
+        "columnName": "created_at",
+        "dataType": "TIMESTAMP"
+      }
+    },
+    "updatedAt": {
+      "type": "date",
+      "required": true,
+      "postgresql": {
+        "columnName": "updated_at",
+        "dataType": "TIMESTAMP"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

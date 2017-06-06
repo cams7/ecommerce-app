@@ -1,0 +1,30 @@
+{
+  "name": "OrderItem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce",
+      "table": "order_item"
+    }
+  },
+  "properties": {
+    "productCost": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "columnName": "product_cost",
+        "dataType": "NUMERIC(10,2)"
+      }
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

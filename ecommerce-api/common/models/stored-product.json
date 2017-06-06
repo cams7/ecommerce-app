@@ -1,0 +1,29 @@
+{
+  "name": "StoredProduct",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce",
+      "table": "stored_product"
+    }
+  },
+  "properties": {
+    "quantity": {
+      "type": "number",
+      "required": true
+    },
+    "subtotal": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "dataType": "NUMERIC(10,2)"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -14,25 +14,53 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "ecommerceDS"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "ecommerceDS",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "ecommerceDS",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "ecommerceDS",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "ecommerceDS",
     "public": false
+  },
+  "Customer": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "OrderItem": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "StoredProduct": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "ProductReview": {
+    "dataSource": "ecommerceDS",
+    "public": true
+  },
+  "ProductImage": {
+    "dataSource": "ecommerceDS",
+    "public": true
   }
 }

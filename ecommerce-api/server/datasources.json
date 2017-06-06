@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "ecommerceDS": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "url": "",
+    "database": "ecommerce",
+    "password": "12345",
+    "name": "ecommerceDS",
+    "user": "ecommerce_admin",
+    "connector": "postgresql"
   }
 }
