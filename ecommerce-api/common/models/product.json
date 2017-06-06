@@ -3,10 +3,7 @@
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true,
-    "postgresql": {
-      "schema": "ecommerce"
-    }
+    "validateUpsert": true
   },
   "properties": {
     "name": {
@@ -70,7 +67,28 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "OrderItem",
+      "foreignKey": "productId"
+    },
+    "stored": {
+      "type": "hasOne",
+      "model": "StoredProduct",
+      "foreignKey": "productId"
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "ProductReview",
+      "foreignKey": "productId"
+    },
+    "images": {
+      "type": "hasMany",
+      "model": "ProductImage",
+      "foreignKey": "productId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

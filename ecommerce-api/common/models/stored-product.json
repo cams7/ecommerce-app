@@ -5,7 +5,6 @@
   "options": {
     "validateUpsert": true,
     "postgresql": {
-      "schema": "ecommerce",
       "table": "stored_product"
     }
   },
@@ -23,7 +22,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -172,6 +172,33 @@ Property name: updatedAt
 Property type: date
 Required? Yes
 
+lb relation
+
+Select the model to create the relationship from: Customer
+Relation type: has one
+Choose a model to create a relationship with: (other)
+Enter the model name: User
+Enter the property name for the relation: user
+Optionally enter a custom foreign key: customerId
+
+lb relation
+
+Select the model to create the relationship from: Customer
+Relation type: has many
+Choose a model to create a relationship with: Order
+Enter the property name for the relation: orders
+Optionally enter a custom foreign key: customerId
+Require a through model? No
+
+lb relation
+
+Select the model to create the relationship from: Customer
+Relation type: has many
+Choose a model to create a relationship with: ProductReview
+Enter the property name for the relation: reviews
+Optionally enter a custom foreign key: customerId
+Require a through model? No
+
 -------------------------------------------------
 
 lb model
@@ -202,6 +229,23 @@ Property name: updatedAt
 Property type: date
 Required? Yes
 
+lb relation
+
+Select the model to create the relationship from: Order
+Relation type: belongs to
+Choose a model to create a relationship with: Customer
+Enter the property name for the relation: customer
+Optionally enter a custom foreign key: customerId
+
+lb relation
+
+Select the model to create the relationship from: Order
+Relation type: has many
+Choose a model to create a relationship with: OrderItem
+Enter the property name for the relation: items
+Optionally enter a custom foreign key: orderId
+Require a through model? No
+
 -------------------------------------------------
 
 lb model
@@ -219,6 +263,22 @@ Required? Yes
 Property name: quantity
 Property type: number
 Required? Yes
+
+lb relation
+
+Select the model to create the relationship from: OrderItem
+Relation type: belongs to
+Choose a model to create a relationship with: Order
+Enter the property name for the relation: order
+Optionally enter a custom foreign key: orderId
+
+lb relation
+
+Select the model to create the relationship from: OrderItem
+Relation type: belongs to
+Choose a model to create a relationship with: Product
+Enter the property name for the relation: product
+Optionally enter a custom foreign key: productId
 
 -------------------------------------------------
 
@@ -266,6 +326,41 @@ Property name: updatedAt
 Property type: date
 Required? Yes
 
+lb relation
+
+Select the model to create the relationship from: Product
+Relation type: has many
+Choose a model to create a relationship with: OrderItem
+Enter the property name for the relation: items
+Optionally enter a custom foreign key: productId
+Require a through model? No
+
+lb relation
+
+Select the model to create the relationship from: Product
+Relation type: has one
+Choose a model to create a relationship with: StoredProduct
+Enter the property name for the relation: stored
+Optionally enter a custom foreign key: productId
+
+lb relation
+
+Select the model to create the relationship from: Product
+Relation type: has many
+Choose a model to create a relationship with: ProductReview
+Enter the property name for the relation: reviews
+Optionally enter a custom foreign key: productId
+Require a through model? No
+
+lb relation
+
+Select the model to create the relationship from: Product
+Relation type: has many
+Choose a model to create a relationship with: ProductImage
+Enter the property name for the relation: images
+Optionally enter a custom foreign key: productId
+Require a through model? No
+
 -------------------------------------------------
 
 lb model
@@ -283,6 +378,14 @@ Required? Yes
 Property name: subtotal
 Property type: number
 Required? Yes
+
+lb relation
+
+Select the model to create the relationship from: StoredProduct
+Relation type: belongs to
+Choose a model to create a relationship with: Product
+Enter the property name for the relation: product
+Optionally enter a custom foreign key: productId
 
 -------------------------------------------------
 
@@ -318,6 +421,22 @@ Property name: updatedAt
 Property type: date
 Required? Yes
 
+lb relation
+
+Select the model to create the relationship from: ProductReview
+Relation type: belongs to
+Choose a model to create a relationship with: Product
+Enter the property name for the relation: product
+Optionally enter a custom foreign key: productId
+
+lb relation
+
+Select the model to create the relationship from: ProductReview
+Relation type: belongs to
+Choose a model to create a relationship with: Customer
+Enter the property name for the relation: customer
+Optionally enter a custom foreign key: customerId
+
 -------------------------------------------------
 
 lb model
@@ -335,6 +454,14 @@ Required? Yes
 Property name: size
 Property type: number
 Required? Yes
+
+lb relation
+
+Select the model to create the relationship from: ProductImage
+Relation type: belongs to
+Choose a model to create a relationship with: Product
+Enter the property name for the relation: product
+Optionally enter a custom foreign key: productId
 
 -------------------------------------------------
 

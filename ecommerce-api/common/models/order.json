@@ -3,10 +3,7 @@
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true,
-    "postgresql": {
-      "schema": "ecommerce"
-    }
+    "validateUpsert": true
   },
   "properties": {
     "quantity": {
@@ -45,7 +42,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    },
+    "items": {
+      "type": "hasMany",
+      "model": "OrderItem",
+      "foreignKey": "orderId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
