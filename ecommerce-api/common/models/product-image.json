@@ -5,6 +5,7 @@
   "options": {
     "validateUpsert": true,
     "postgresql": {
+      "schema": "ecommerce",
       "table": "product_image"
     }
   },

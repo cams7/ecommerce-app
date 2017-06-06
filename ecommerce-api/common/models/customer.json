@@ -1,9 +1,12 @@
 {
   "name": "Customer",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce"
+    }
   },
   "properties": {
     "name": {
@@ -42,9 +45,9 @@
   "validations": [],
   "relations": {
     "user": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "User",
-      "foreignKey": "customerId"
+      "foreignKey": "userId"
     },
     "orders": {
       "type": "hasMany",
@@ -55,7 +58,7 @@
       "type": "hasMany",
       "model": "ProductReview",
       "foreignKey": "customerId"
-    }
+    }    
   },
   "acls": [],
   "methods": {}

@@ -175,11 +175,11 @@ Required? Yes
 lb relation
 
 Select the model to create the relationship from: Customer
-Relation type: has one
+Relation type: belongs to
 Choose a model to create a relationship with: (other)
 Enter the model name: User
 Enter the property name for the relation: user
-Optionally enter a custom foreign key: customerId
+Optionally enter a custom foreign key: userId
 
 lb relation
 
@@ -298,11 +298,7 @@ Property name: pricing
 Property type: number
 Required? Yes
 
-Property name: shortDescription
-Property type: string
-Required? No
-
-Property name: longDescription
+Property name: description
 Property type: string
 Required? No
 
@@ -465,5 +461,5 @@ Optionally enter a custom foreign key: productId
 
 -------------------------------------------------
 
-
+npm install async -save
 	

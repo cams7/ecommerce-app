@@ -3,7 +3,10 @@
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce"
+    }
   },
   "properties": {
     "name": {
@@ -21,17 +24,8 @@
         "dataType": "NUMERIC(10,2)"
       }
     },
-    "shortDescription": {
-      "type": "string",
-      "postgresql": {
-        "columnName": "short_description"
-      }
-    },
-    "longDescription": {
-      "type": "string",
-      "postgresql": {
-        "columnName": "long_description"
-      }
+    "description": {
+      "type": "string"
     },
     "published": {
       "type": "boolean",

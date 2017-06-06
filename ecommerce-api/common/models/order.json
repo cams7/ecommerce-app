@@ -3,7 +3,10 @@
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "ecommerce"
+    }
   },
   "properties": {
     "quantity": {
