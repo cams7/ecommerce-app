@@ -7,3 +7,6 @@ SELECT * FROM ecommerce."customer";
 SELECT * FROM ecommerce."order";
 SELECT * FROM ecommerce."product";
 SELECT * FROM ecommerce."stored_product";
+SELECT * FROM ecommerce."order_item";
+SELECT * FROM ecommerce."product_image";
+SELECT * FROM ecommerce."product_review";
