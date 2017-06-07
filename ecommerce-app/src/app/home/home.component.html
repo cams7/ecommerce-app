@@ -31,9 +31,9 @@
           <span *ngIf="!product.available; else productPricing"  class="product-block-not-available">Out of Stock</span>
           <ng-template #productPricing>{{ product.pricing | currency:'BRL':true }}</ng-template>
         </h4>
-        <h4 class="pull-left"><a [routerLink]="['/items', product.id]">{{ product.name }}</a></h4>
+        <h4 class="pull-left"><a [routerLink]="['/items', product.id]">{{ product.name | productShortName }}</a></h4>
         <div class="clearfix"></div>
-        <p class="product-block-description">{{ product.short_description }}</p>
+        <p class="product-block-description">{{ product.description | productShortDescription }}</p>
       </div>
     </div>    
   </div><!-- /.row -->

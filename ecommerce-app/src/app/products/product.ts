@@ -1,15 +1,18 @@
 export class Product {
   
-  published: boolean = false;
-  rating_cache: number = 3.0;
-  rating_count: number = 0;
-  name: string;
+  name: string;  
   pricing: number = 0.0;
-  short_description: string;
-  long_description: string;
+  description: string;
+
+  published: boolean = false;
+
+  ratingCache: number = 0;
+  ratingCount: number = 0;  
+ 
+  createdAt: Date;
+  updatedAt: Date;
+
   icon: string;
-  created_at: Date;
-  updated_at: Date;
   available: boolean = true;
 
   constructor(public id: number) {

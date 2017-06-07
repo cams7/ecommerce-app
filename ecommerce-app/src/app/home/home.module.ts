@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+import { SharedModule } from './../shared/shared.module';
+
 import { HomeComponent } from './home.component';
 
 import { ProductsService } from './../products/products.service';
@@ -13,6 +15,7 @@ import { HomeRoutingModule } from './home-routing.module';
   imports: [
     CommonModule,
     CarouselModule.forRoot(),
+    SharedModule,
     HomeRoutingModule
   ],
   declarations: [

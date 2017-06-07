@@ -56,6 +56,8 @@ ng g m products
 ng g c products
 ng g s products/products
 ng g class products/product
+ng g p products/product-short-description
+ng g p products/product-short-name
 
 ng g m reviews
 ng g c reviews
@@ -97,6 +99,9 @@ cp -r ~/Dev/Projetos/ecommerce/ecommerce-app/dist/*  ~/Dev/Projetos/ecommerce/ec
 
 node .
 #Go to http://0.0.0.0:3000
+#CTR-C
+
+node ./server/migrate.js
 #CTR-C
 
 -------------------------------------------------

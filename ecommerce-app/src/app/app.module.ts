@@ -5,20 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { SharedModule } from './shared/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutUsComponent,
-    PageNotFoundComponent
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    SharedModule,
     AppRoutingModule
   ],
   providers: [
