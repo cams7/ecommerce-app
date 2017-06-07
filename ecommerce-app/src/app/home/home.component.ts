@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   private loadProducts(): void {
-    this.productsService.all().subscribe(
+    this.productsService.findAll().subscribe(
       products => this.products = products
     );
   }

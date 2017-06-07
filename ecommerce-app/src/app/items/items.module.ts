@@ -5,6 +5,9 @@ import { ItemsComponent } from './items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 
 import { ItemsService } from './items.service';
+import { ProductsService } from './../products/products.service';
+
+import { ItemResolver } from './guards/item.resolver';
 
 import { ItemsRoutingModule } from './items-routing.module';
 
@@ -18,7 +21,9 @@ import { ItemsRoutingModule } from './items-routing.module';
     ItemDetailsComponent
   ],
   providers: [
-    ItemsService
+    ItemsService,
+    ProductsService,
+    ItemResolver
   ]
 })
 export class ItemsModule { }

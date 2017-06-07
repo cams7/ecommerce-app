@@ -5,10 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { ItemsComponent } from './items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 
+import { ItemResolver } from './guards/item.resolver';
+
 const routes: Routes = [
   {
     path: ':id',
-    component: ItemDetailsComponent
+    component: ItemDetailsComponent,
+    resolve: { item : ItemResolver }
   },
   {
     path: '',

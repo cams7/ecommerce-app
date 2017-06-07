@@ -440,6 +440,11 @@ function createProductImages(products, cb) {
                 size: 2
             },
             {
+                productId: products[1].id,
+                icon: 'https://lh3.googleusercontent.com/POHoI6YiMkS4JRXEttngnqHEs0Hw2euFKlbrOcrHvXwLuQnGYc_tioK5x1Fk4MepQygNBF4uxnCQ8EmUfFIJIDqybBNonld3G_QgGBVZmsa332UYhqMdT0bTj4ZowS-tpCvoull0p2jSmDJ6HCyN-Q0j4kDhi1OGdUtcha43dwIwxUag2a0rK03R7Ly4yuMwsJpw-46zgxvHFWki3uJ7Ycs4wTUs6ZK5o7YB3-GV61pJbjqpbCR-anvCfcRJL8HkvUaOohV8cFR-bXTUkuhXF1Ah7tJA48_Md6pqIyUsQ3Zo9UTvP4TgjNvXJqjidDxLnGhT9Fvulkr5y8KIpE6_0bcgFzeT3m-dawOUAOcfN03kL2lbMn-IRNCEa3csnvnN00wO-rih90yGHT1dQyCtP5zS3VvsocnH48xOWpr6mT0myL7PakJ1JF1EqyIzyLcqY0yWMxzaVXnpq4FjL6cHzMHkce8gFipEAZnTHYytudBkWTMHIlS5O2I8zgJDUAiYKRcTS9XsCayZOyo76vBm4bYgr5-PGXmSitdHoltX7ocgYyaYIwZ21V2moDmgm0XtpdJkTIjLf875Bg9McrXlmkqk4jlVW6RA_gyyKY2h7N2rxbSCBXcJ=w120-h100-no',
+                size: 3
+            },
+            {
                 productId: products[2].id,
                 icon: 'https://lh3.googleusercontent.com/a9iAcZ6UmSQuSCEF916Sfw1gUZ_pZhKrqewZg2FVRbEr-Kp2MoJclxaWmGh0nVEz642nGiKHshpmMNTN0uG7S63gxj5vkEr1SwPwySLB-gMuNVCpk1FBiy5o6CdiucH3oSKdtQP5xBJCEf2qt1NCsn76-jBFl0573u7IAWJ4N7NGNjiEX7UHn8tskeB1mAEqpPQFxH3c7lHaPzKVOp2jO839-DsGuj1jXw65yE09SJRylfK0qTjc0-k_qpl5tLcK5JlK6Iz0RIO01QjeFQAVXAb7OA3HHwI5lCrR67IiKk9Veqihi10kTc5ZaDzwrtGcJP9LtN1oBPA13OZN3Wxc6LN2Ehuro-Kh-0zRQgfKHDE8AKrWOUA720ULAfE3KZIfA-Hr3-4vB7C-lXuKa9wXULk93vkVrqrY857r7-zpeVQfyYyaWIgg963nAhNAytL2wB6Muu9hi25nK1Opxj8-oQ-qTGp4fIrS4joeN5LN-Jilh3Asqp1mjIxs6jyBVscKyUY4twhDnvl2Ku713zZmmYGYnQ2Tqgc576v4xffsHGWAwfdteseU-_Mqx7gWzZOqkxgM94ts1WF7sSCoyFgugy5kVJSzWqi1DrlfeBICWj3RVpPc6Tk5=w400-h500-no',
                 size: 1
@@ -448,6 +453,11 @@ function createProductImages(products, cb) {
                 productId: products[2].id,
                 icon: 'https://lh3.googleusercontent.com/NkrfeZBy1w4Q3FHeQJ7GFg1nCgWsAV51OQqjcsWeXUYn5hW6FajL9oS6NV9SVHlQB4rlln8ZSb2pxijlczUvL-IQBahvowCF3zwMmnzltxSWtxt6NObkKoy5idMU6XFtpFOQcNSQED1DAB9fhw_DPFGi6NmjIfi5vPyRZNbxbTz5N8ikBMYRMrWkVnQr4Xrl9Skd5wuprRE-Tx2b0XMluxmkXBy886x8IGVPviEaU1dRucK97EFnvcEVxF7Mcqpj0Ijy9C1Rtus102nNb2xroxQhmAMrMWtQidSqj3O4ljWjb5_B1y34CZ1kgych_m1cl4B23EWsPY_vEqUyb_02B3T1Gr8MCRmCSRg-sr_eynPESH2SpnHHc05f5bTycJfq1Skt9YyoPUiKL2fG4IKJgn1XkhYHbrSsrRri_8N1HTAew5pzOP0obZnyoHZaE6lno1KSMlA4fFcoEwQEZH8XOk0wXtHdi4V8yy3ZeJuH5nYIjroIUTm2oHPO-SrcNz26vxp2vRIY1UvSWchf27_hduGinskXu706p5YZffnfMObGw_IaSjvos4b1nouXEoFg6X_JFpjoJlZBT9EUhNyRwq5mhNAWf3vw_lPAKPMmW270bnLJUgCz=w298-h350-no',
                 size: 2
+            },
+            {
+                productId: products[2].id,
+                icon: 'https://lh3.googleusercontent.com/Oe_0ZHCsGggklJzEk_BEMrwhKTcsOhLV574QiEu9WXQE2flHlTMQG4OiDiA2Y7xsT2iNwk2w2pGKIShczCEgotFH5Y2cDy4UXLv0uxVF58dcS-yBYM22lx8T7dfJjPDl23H1ZHuUA-V5lhBazoJ3H2OaERnVRN0bNkVEdzDwsFEPHrHmnlaHu-hvLJBrSB6W1NIDQ9q1vOgRrCIkXzIMs-WnZbAEN52O1ez76IxU5n_1xmie85PZJ0cc_2MC1gXLiL6efLyaUBPFG2ItVmWH-YRKBv0UhD0QPAYeW-AYLG5YQXyVFRXAarxcg_nQlH9U33gQiacCVf_rU_cAyM6-0xlJNQkSvSIOJ8xUKx0DU5nZn4LdI3mHcQIau0yxOs50qrP-O-gzF8MGyVpBVtPLDqp9egDqwDf8wdOm6vAYxDL2nOVmsvnscOTtH8tA3GtLzRnv7qha85_V4DTHrWbbhcNoJ1otlRfUjgDQgnvlnTSe4_Ftdzg0lUqHN4VKky4_SPx5DO2ak2QzyRr0G5ZfGDxorAvcOxrHafew1XAUsLc8lPXv6G19zIkJIm1UQIHrk5E4FODhLvUzAYJcOdR3FqOkFEuk1hX2yrcoFV7meW2kQerfbIVF=w120-h100-no',
+                size: 3
             },
             {
                 productId: products[3].id,
@@ -460,6 +470,11 @@ function createProductImages(products, cb) {
                 size: 2
             },
             {
+                productId: products[3].id,
+                icon: 'https://lh3.googleusercontent.com/5lk0qzO7QnJJ2nRK9UwB7fe4VTUO_tutnOONQ7lSy2ILYyBjeCkx_bKGF6z5qXVt6rOoVnn0lGWmSyqlvsWymf_XULlJYBAUsoOFF38cOIVl3oe-QiEQ8ftCnLiOa9UtQWfLXwIcqtOf4cY8Qyd0flOtxGVkmKZRVAcwdkz80VQOROrgjIzLbB9cXS4jblQF2Jen500Xhdw3Jf23fFVffWR_DDpfNJrrzL_H-pIhuqBc3Njze3PWapqLJVSGaAgoRNQRvO6Zb7l1aVbKrYdSsxu5lK9rv-Gjaw4qH-yHAAfiHx-ZlmNndT_eDM9qWBdTUIUPmT1OGcLmq04nEYUMmqJ0xFgSmGw7QcV77JZQeaNVFovjb6PQjJ_mKQiqx8xzblVuS0zJYERSjL197diOnRUidOxktw5G2u8BTbrRU8bnZHJhF1B3mflGR-P7Kb0USm6VWnmstfD6yjtsZseUoCD5gToAeL4ZybKF8p2gmM10FvIwH_PSlpgLo0i7-JUse-l43_j0zurbgdOPwGcgjspBfqOn0rPUalJRNq4psx9oIS2vvcY42P9G7eEERaLROoA6_waPunaxErkkl98hCX589_zLpvU4ivmAB2NpU2AIKna8ZSP_=w120-h100-no',
+                size: 3
+            },
+            {
                 productId: products[4].id,
                 icon: 'https://lh3.googleusercontent.com/KQQLVgAXKXL-QklYV8ZbtXeM1t18RA2IaZFWI2y_wKUhWBBcfq4k-B-QUmwEPGnfKZ_I7Ao8PA7_DtlMBnaYzqNDTtiuw4LtapP7W8OICT3RcgogO8x5tBD-RIhBb4xhJ3LXAkMF5S9iLKpwyVDaw3eEn2hZtCl-3R8K-B9gNWeRft9yHQnqoZ54ygaMRzMRKIhS7KXT0ZvTwkLsRTNdX0A7tk1N2YlLkL5WInuYAihwd4AwQPIzjwdJNhnuwJC02nbVAIoeU7WJfTyzTYXamayH7tlQBsKAzTIlu84CIQWnbLJkFFLtAuerv6qKNVKmgLng7JZVhSMGTI93HYyCD_Q7OLde5qUlX8DKaXqMh9Liy3MJVSb8VqnCKSwSTKu1x5LvPEfcBMKlV4P6S-ElNLfGwZK8gjkbHEfpP12S-pFpbxE6NxiWGn7B3SZxp4oDkckkCDOC3cSorjU4jrP1gCPB9ToGJJ6bQRpw6HcoQq-KB8I1StoSljHrJiTnxPWecMARY4rfyKnswbNuPIZHWkoKPZnqst6zPcl5FRqBg2Uv7ZJ9oOgl6kBdiF06oCMf2QjoGXEiojJ1BpBRH7wEJXe_Zy86HMUC0o8yLM07nx9PQOnOoMH5=w400-h500-no',
                 size: 1
@@ -468,6 +483,11 @@ function createProductImages(products, cb) {
                 productId: products[4].id,
                 icon: 'https://lh3.googleusercontent.com/4T-jsX0VFntpyyceCt4Kyc-tWHdexUFjwqd3TQs4FCeaMiHU7NMPySFhZIM3SFgc05tN0rn59zGP7NdFYNjoY0n76XtRm3ARmkdyFf9NyckgT24GeZ7SxYcRICtCoVGYUBNjBG-5JWvpDduxoJ09wUPD8tECOuOC1mpzRIW7Fqzvg-ICWoPRphVdRXm_7rzUHgwyzR-LNQosdSFSWfq61YNG1rDT7uNDZ9iyaWtfkz6ztPPFKx12fpNAajh5YuelhHcWGh-kn2AMNFlqxln-jGFB6Ch-kwB2RfIVn31kPkzVnow2qhqwBc9NNVFVK6jKcGnn0hTK7iNm3unG_MxMIX-yDyhTnXU0llFhHzjY6E_pQrG_QJl7vkIMT8LNnjqISSgu8hNYO2O9G-UelK5KkWtSnjm81KYbSH4hMaIKQXtrY-FJIo0yG3fAsUNhaIHwpNXhIDx5RG5vBKiFt9NQgb0AP7paSsZhlM156YTZkWfuAGpSQCySkdF7PLOAi1AykZfFntvJNWLiD504ZM8t5pSBISfY-jRbuk0VegJ99owI9stlddmxl5ZQRmwyhuSb8GJ0utuYV_87KSvhTlLcGgBxb4MDxdKUMh3qnUShT1H38mBbEj1R=w298-h350-no',
                 size: 2
+            },
+            {
+                productId: products[4].id,
+                icon: 'https://lh3.googleusercontent.com/LzjYQCnuLeVa264KBoh8jWoLE3c1HaoWTI7g1Gn8T4HT9lfDI8vAjSf5jIxCiHx4KRveetqROidl65_bg6ANmvuNDssnQXTLvDB9SVqmIMEAql1wsA4CTSe0qkN1CpNYNbpFbft1s-VPNcJnb3oEy_GHJnEsmqD69iXVwoaIqg7gcSKdbVbWJ_SLF9LryWYDuTfrICsm6GAYMi0XQHdZIFb65-d3fyNH-90O-rI9cwssvzuzLNINxPO9G64qeNooNcYO2grq0pXgD9gvkOA_i2kV3Ombedp0lIkrbVpdvaq4ahSw2o650E2-9lpYOKmhiAld0LAf8xfFGhyuQ7eO7RX8sMnVke0IW8UT-YpH2F2I3zp2qvy4JuU63MehXmA0C9Qdrx1DnimyrqI2S4ANwzZrXBXqJA4HBwiZveHDpYnb3w_HGqq7WYvRGu3I8CuoHQj_HhsWJLffA_M84NKM5_WTxr8EnQRFyDEjEKC7M9uCPevzlIM7K1_iQpVU9w3whp87RGZD1fNPG73zOJXFS5r4xqIIESwJMLxUEE19T8Bz_M9LITBMzr6Gvg1A9B2eNjNUIh9UjFHm3UO4qmR7XYwGl9HdZJ1iCuayWsS_PJWmWuoKLY3L=w120-h100-no',
+                size: 3
             },
             {
                 productId: products[5].id,

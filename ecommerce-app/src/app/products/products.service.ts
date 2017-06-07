@@ -9,7 +9,8 @@ import { Product } from './product';
 @Injectable()
 export class ProductsService {
 
-  private PATH: string = 'Products?filter[include]=images&filter[include]=stored';
+  private PATH: string = 'Products';
+  private FILTERS:string = '?filter[include]=images&filter[include]=stored';
 
   constructor(
     private http: Http,
@@ -17,13 +18,19 @@ export class ProductsService {
   ) {    
   }
 
-  all(): Observable<Product[]> {
-    return this.http.get(this.httpUtil.url(this.PATH), this.httpUtil.headers())
-      .map(this.getProduct)
+  findAll(): Observable<Product[]> {
+    return this.http.get(this.httpUtil.url(this.PATH + this.FILTERS), this.httpUtil.headers())
+      .map(this.getProducts)
         .catch(this.httpUtil.processErrors);
   }
 
-  getProduct(response: Response): Product[] {
+  findById(id: number): Observable<Product> {
+    return this.http.get(this.httpUtil.url(this.PATH + '/' + id + this.FILTERS), this.httpUtil.headers())
+      .map(this.httpUtil.extractData)
+        .catch(this.httpUtil.processErrors);
+  }
+
+  private getProducts(response: Response): Product[] {
     let products: any = response.json() || {};
     
     return products.map(product => {

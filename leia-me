@@ -59,6 +59,10 @@ ng g class products/product
 ng g p products/product-short-description
 ng g p products/product-short-name
 
+ng g s products/guards/product-resolver
+#Rename product-resolver.service to product.resolver
+#Rename product-resolver.service.spec to product.resolver.spec
+
 ng g m reviews
 ng g c reviews
 ng g s reviews/reviews
