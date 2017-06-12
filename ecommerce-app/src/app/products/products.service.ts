@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import { HttpUtilService } from './../shared/utils/http-util.service';
+import { HttpUtil } from './../shared/utils/http-util';
 
 import { Product } from './product';
 
@@ -13,21 +13,20 @@ export class ProductsService {
   private FILTERS:string = '?filter[include]=images&filter[include]=stored';
 
   constructor(
-    private http: Http,
-    private httpUtil: HttpUtilService
+    private http: Http
   ) {    
   }
 
   findAll(): Observable<Product[]> {
-    return this.http.get(this.httpUtil.url(this.PATH + this.FILTERS), this.httpUtil.headers())
+    return this.http.get(HttpUtil.url(this.PATH + this.FILTERS), HttpUtil.headers())
       .map(this.getProducts)
-        .catch(this.httpUtil.processErrors);
+        .catch(HttpUtil.processErrors);
   }
 
   findById(id: number): Observable<Product> {
-    return this.http.get(this.httpUtil.url(this.PATH + '/' + id + this.FILTERS), this.httpUtil.headers())
-      .map(this.httpUtil.extractData)
-        .catch(this.httpUtil.processErrors);
+    return this.http.get(HttpUtil.url(this.PATH + '/' + id + this.FILTERS), HttpUtil.headers())
+      .map(HttpUtil.extractData)
+        .catch(HttpUtil.processErrors);
   }
 
   private getProducts(response: Response): Product[] {

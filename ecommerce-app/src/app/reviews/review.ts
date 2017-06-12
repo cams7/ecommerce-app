@@ -6,8 +6,8 @@ export class Review {
     public product: Product,
     public rating: number,
     public comment: string,
-    public approved: boolean = true,
-    public spam: boolean = false,
+    public approved: boolean,
+    public spam: boolean,
     public created_at: Date,
     public updated_at: Date
   ) {}

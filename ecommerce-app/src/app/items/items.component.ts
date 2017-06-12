@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { ItemsService } from './items.service';
 import { Item } from "./item";
@@ -8,7 +8,7 @@ import { Item } from "./item";
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css']
 })
-export class ItemsComponent implements OnInit {
+export class ItemsComponent implements OnInit, OnDestroy {
 
   items: Item[] = [];
 
@@ -21,9 +21,12 @@ export class ItemsComponent implements OnInit {
   }
 
   private loadItems(): void {
-    this.itemsService.all().subscribe(
+    this.itemsService.findAll().subscribe(
       items => this.items = items
     );
+  }
+
+  ngOnDestroy() {
   }
 
 }

@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 import { Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-@Injectable()
-export class HttpUtilService {
-  private API_URL: string = 'http://localhost:3000/api/';
+export class HttpUtil {
+  private static API_URL: string = 'http://localhost:3000/api/';
 
   constructor() { }
 
-  url(path: string): string {
+  static url(path: string): string {
     return this.API_URL + path;
   }
 
-  headers(): RequestOptions {
+  static headers(): RequestOptions {
     const headersParams = { 'Content-Type': 'application/json' };
     if (localStorage['token']) {
       headersParams['Authorization'] = localStorage['token'];
@@ -23,13 +22,13 @@ export class HttpUtilService {
     return options;
   }
 
-  extractData(response: Response): any {
+  static extractData(response: Response): any {
     const data = response.json();
     return data || {};
   }
 
-  processErrors(erro: any) {
-    return Observable.throw('An error occurred while trying to access the server.');
+  static processErrors(error: any) {
+    return Observable.throw(error.json().error || 'Server error');
   }
 
 }

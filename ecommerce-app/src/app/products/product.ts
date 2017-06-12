@@ -1,22 +1,22 @@
 export class Product {
   
-  name: string;  
-  pricing: number = 0.0;
-  description: string;
+  constructor(
+    public id: number,
+    public name: string,  
+    public pricing: number,
+    public description: string,
 
-  published: boolean = false;
+    public published: boolean,
 
-  ratingCache: number = 0;
-  ratingCount: number = 0;  
+    public ratingCache: number,
+    public ratingCount: number,  
  
-  createdAt: Date;
-  updatedAt: Date;
+    public createdAt: Date,
+    public updatedAt: Date,
 
-  icon: string;
-  available: boolean = true;
-
-  constructor(public id: number) {
-  }
+    public icon: string,
+    public available: boolean
+  ) {}
   
 }
 

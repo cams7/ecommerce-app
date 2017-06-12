@@ -6,8 +6,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductShortDescriptionPipe } from './product-short-description.pipe';
 import { ProductShortNamePipe } from './product-short-name.pipe';
 
-import { HttpUtilService } from './utils/http-util.service';
-
 @NgModule({
   imports: [
     CommonModule
@@ -16,9 +14,6 @@ import { HttpUtilService } from './utils/http-util.service';
     PageNotFoundComponent,
     ProductShortDescriptionPipe,
     ProductShortNamePipe
-  ],
-  providers: [
-    HttpUtilService
   ], 
   exports: [
     ProductShortDescriptionPipe,
