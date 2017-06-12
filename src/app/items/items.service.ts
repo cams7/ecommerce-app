@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import { HttpUtil } from './../shared/utils/http-util';
-
 import { Item } from './item';
 import { Product } from './../products/product';
 
@@ -28,13 +26,13 @@ export class ItemsService {
     });
   }
 
-  findByProductId(id: number): Item {
-    let item: Item = new Item(0, null, 0, 0);
-    
-    this.productsService.findById(id).subscribe(
-      product => item.product = product
-    );
+  findByProductId(id: number): Observable<Item> {
+    return this.productsService.findById(id).map(this.getItem);
+  }
 
+  private getItem(product: Product): any {
+    let item: Item = new Item(0, null, 0, 0);
+    item.product = product;
     return item;
   }
 

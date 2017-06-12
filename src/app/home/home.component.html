@@ -24,7 +24,7 @@
     <div *ngFor="let product of products" class="col-md-4 col-sm-6 col-xs-12 product-home">    
       <a [routerLink]="['/items', product.id]">
         <img class="img-responsive img-portfolio img-hover" src="{{ product.icon }}" alt="{{ product.name }}">
-      </a>
+      </a>     
 
       <div class="caption">
         <h4 class="pull-right">  

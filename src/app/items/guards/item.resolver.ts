@@ -14,8 +14,7 @@ export class ItemResolver implements Resolve<Item> {
 
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Item | Observable<Item> | Promise<Item> {
-
+    state: RouterStateSnapshot): Observable<Item> {
       const id = route.params['id'];
 
       return this.itemsService.findByProductId(id);
