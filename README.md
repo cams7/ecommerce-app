@@ -1,28 +1,114 @@
-# EcommerceApp
+# Ecommerce APP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
+* Autor: César Magalhães
+* Tecnologias: Angular, Node JS
+* Resumo: Aplicação Angular
+* Linguagens: TypeScript
+* Fonte: <https://github.com/cams7/ecommerce-app/>
+* Site: <https://cams7.github.io/ecommerce-app/>
+* Linkedin: <https://br.linkedin.com/in/cams7>
 
-## Development server
+## Qual a finalidade desse projeto?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Criar uma APP de Loja Virtual.
 
-## Code scaffolding
+## Sistemas requeridos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+* [Microsoft Windows 10](https://www.microsoft.com/pt-br/software-download/windows10)
+* [Ubuntu 16.04.5 LTS](http://releases.ubuntu.com/16.04/)
+* [Git](https://git-scm.com/downloads)
+* [Angular](https://angular.io/)
+* [Node JS](https://nodejs.org/en/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
-## Build
+## Para testa o exemplo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Instale o Git
+* Instale o Node JS
+* Instale o Visual Studio Code
 
-## Running unit tests
+-------------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+cd ~/Dev/Projetos/ecommerce
+ng new ecommerce-app --routing
 
-## Running end-to-end tests
+cd ~/Dev/Projetos/ecommerce/ecommerce-app
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+ng serve
+#Go to http://localhost:4200
+#CTR-C
 
-## Further help
+npm install ngx-bootstrap bootstrap --save
+npm install --save font-awesome angular2-font-awesome
+npm install angularjs-color-picker --save
+npm install jquery --save
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Change `ecommerce-app/.angular-cli.json`
+
+`"styles": ["../node_modules/bootstrap/dist/css/bootstrap.css","../node_modules/font-awesome/css/font-awesome.css","styles.css","../node_modules/angularjs-color-picker/dist/angularjs-color-picker.css"],`
+`"scripts": ["../node_modules/jquery/dist/jquery.js","../node_modules/bootstrap/dist/js/bootstrap.js"],`
+
+```sh
+cd ~/Dev/Projetos/ecommerce/ecommerce-app
+
+ng g m home
+ng g c home
+
+ng g c about-us
+
+ng g m blog
+ng g c blog
+
+ng g m contact
+ng g c contact
+
+ng g c page-not-found
+
+ng g s settings
+
+ng g m products
+ng g c products
+ng g s products/products
+ng g class products/product
+ng g p products/product-short-description
+ng g p products/product-short-name
+
+ng g s products/guards/product-resolver
+#Rename product-resolver.service to product.resolver
+#Rename product-resolver.service.spec to product.resolver.spec
+
+ng g m reviews
+ng g c reviews
+ng g s reviews/reviews
+ng g class reviews/review
+
+ng g m items
+ng g c items
+ng g c items/item-details
+ng g s items/items
+ng g class items/item
+
+ng g m checkout
+ng g c checkout
+ng g s checkout/checkout
+
+npm test
+#CTR-C
+
+ng lint -fix
+
+ng build --prod
+
+npm start
+#Go to http://localhost:8080
+#CTR-C
+```
+```sh
+sudo npm i -g angular-cli-ghpages
+
+ng build --prod --base-href "https://cams7.github.io/ecommerce-app/"
+
+ngh
+```

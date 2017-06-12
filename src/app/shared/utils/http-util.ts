@@ -3,7 +3,8 @@ import { Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 export class HttpUtil {
-  private static API_URL: string = 'http://localhost:3000/api/';
+  //private static API_URL: string = 'http://localhost:3000/api/';
+  private static API_URL: string = 'https://warm-island-68633.herokuapp.com/api/';
 
   constructor() { }
 
